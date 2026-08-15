@@ -5,7 +5,7 @@ Zero-cost daily quantum computing news brief. GitHub Actions pulls RSS feeds (ar
 ## How it works
 
 1. Cron (or **Run workflow**) starts `.github/workflows/daily_digest.yml`.
-2. `digest.py` fetches feeds, keeps entries from the past 24 hours, and calls `gemini-2.5-flash`.
+2. `digest.py` fetches feeds, keeps entries from the past 24 hours, and calls `gemini-3.6-flash`.
 3. Markdown is converted to HTML and sent with `smtplib` through Gmail.
 
 Schedule: `0 12 * * *` (12:00 UTC ≈ 7:00 AM EST / 8:00 AM EDT). Change the cron in the workflow file if you want a different time. GitHub cron can drift by a few minutes.
@@ -30,7 +30,7 @@ Those names are what the workflow maps into environment variables. If a name is 
 
 1. Go to [Google AI Studio](https://aistudio.google.com/apikey).
 2. Create an API key for a Google account.
-3. Store it as `GEMINI_API_KEY`. The script uses `gemini-2.5-flash` on the Gemini Developer API (AI Studio free tier), not Vertex AI billing.
+3. Store it as `GEMINI_API_KEY`. The script uses `gemini-3.6-flash` on the Gemini Developer API (AI Studio free tier), not Vertex AI billing. Newer Gemini keys cannot call retired `gemini-2.5-flash`.
 
 Free-tier limits can change; if a run fails with quota/429, wait and retry, or check [Gemini rate limits](https://ai.google.dev/gemini-api/docs/rate-limits).
 
