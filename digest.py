@@ -25,7 +25,7 @@ FEEDS = [
 ]
 
 LOOKBACK = timedelta(hours=24)
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.6-flash"
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 587
 USER_AGENT = "QuantumDigest/1.0 (+https://github.com; daily RSS digest)"
