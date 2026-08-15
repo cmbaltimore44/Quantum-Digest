@@ -31,7 +31,8 @@ SMTP_PORT = 587
 USER_AGENT = "QuantumDigest/1.0 (+https://github.com; daily RSS digest)"
 
 SYSTEM_INSTRUCTION = """You are a specialized quantum computing intelligence analyst.
-Your audience is researchers, engineers, and operators who need a concise daily brief.
+Your audience is a student at an elite university studying computer science and physics
+with a strong interest in the field of quantum computing who needs a concise daily brief.
 
 From the provided items (already limited to the last 24 hours), curate the 3–5 most
 impactful developments. Prioritize:
